@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-body{
+    background-color: lightgray;
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid rebeccapurple; */
+    padding: 2px;
+    box-sizing: content-box;
+    /* margin: auto; */
+}
+
+/* heading */
+.heading h5{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+/* input box */
+#screen:focus{
+    outline: none;
+}
+input-sec{
+    width: 100%;
+}
+
+#screen{
+    margin-top: 5px;
+    line-height: 0;
+    padding-bottom: 0px;
+    width: 300px;
+    text-indent: 100px;
+    height: 40px;
+    /* font-size: rem; */
+    text-align: right;
+}
+
+/* dial pad */
+.b-col{
+    border: 0.5px solid lightgray;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+}
+.container{
+    margin-top: 30px;
+}
+.bot-r1{
+    /* border: 1px solid red; */
+    height: 35px;
+}
+
