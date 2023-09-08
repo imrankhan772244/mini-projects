@@ -31,15 +31,13 @@
   background-color: #0079bf;
   color: #fff;
   margin-left: 5px;
+  font-size: medium;
 }
 .add_task_btn:hover {
   background: #66a9d0;
   cursor: pointer;
 }
 
-.view-sec {
-  /* margin-top: 30px; */
-}
 
 /* top heading */
 h1 {
@@ -212,6 +210,8 @@ ul li:hover {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  height: 30px;
+  font-size: medium;
 }
 
 .clear_btn:hover {
@@ -227,16 +227,28 @@ ul li:hover {
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  height: 30px;
+  font-size: medium;
 }
 /* common btn hover class */
 .btn:hover {
   background: #66a9d0;
 }
-
 .all{
   width: 50px;
 }
-
 .btns{
   margin: 20px 0;
+}
+
+
+/* clear completed btn */
+.clear_completed{
+margin-left: 90px;
+color: #888;
+cursor: pointer;
+}
+.clear_completed:hover{
+  color: black;
+  font-size: medium;
 }

@@ -7,6 +7,20 @@ const completed_tasks = document.getElementById("completed"); // variable for al
 const uncompleted_tasks = document.getElementById("uncompleted"); // variable for all uncompleted tasks
 const all = document.getElementById("all"); // variable for all tasks
 const add_task_btn = document.getElementById("add_task_btn"); //add task button
+const clear_completed=document.getElementById("clear_completed");
+
+
+
+clear_completed.addEventListener('click',function(){
+    const completed=tasks.filter(item=>{
+        return item.done!=true;
+    })
+    tasksList.innerHTML="";
+    console.log(completed);
+    for(let i=0;i<completed.length;i++){
+        addTaskToDOM(completed[i]);
+    }
+})
 
 // function for add task button
 add_task_btn.addEventListener("click", function () {
