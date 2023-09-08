@@ -1,33 +1,52 @@
-
 <html>
   <head>
     <title>Todo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
     <div class="todo">
-    <h1>Todo List App</h1>
-    <div id="container">
-      <input placeholder="Add a task" class="add-task" id="add" data-helloWord="asdasdas"/>
-      <span id="total-tasks">Total tasks: <span id="tasks-counter">0</span></span>
-      <span id="Complete_all" class="complete_all"> <i class="fa-solid fa-check-double"></i>Complete All</span>
-      <!-- <button class="clear_btn" id="clear_btn">clear all</button> -->
-      <div class="tasks_sec">
-      <ul id="list">
-
-        <!-- <li>
-          <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
-          <label for="task1">Buy groceries</label>
-          <img src="bin.svg" class="delete" data-id="12" />
-        </li> -->
-      </ul>
+      <h1>Todo List App</h1>
+      <div id="container">
+        <div class="name_sec" id="name_sec">
+          <input
+            placeholder="Add a task"
+            class="add-task"
+            id="add"
+            data-helloWord="asdasdas"
+          />
+          <button class="add_task_btn" id="add_task_btn">Add Task</button>
+        </div>
+        <div id="view-sec" class="view-sec">
+          <span id="total-tasks"
+            >Total tasks: <span id="tasks-counter">0</span></span
+          >
+          <span id="Complete_all" class="complete_all">
+            <i class="fa-solid fa-check-double"></i>Complete All</span>
+        </div>
+        <div class="tasks_sec">
+          <ul id="list">
+          
+          </ul>
+        </div>
+        <div class="btns">
+        <button class="clear_btn" id="clear_btn">clear all</button>
+        <button id="all" class="all btn">All</button>
+        <button id="completed" class="completed btn">completed tasks</button>
+        <button id="uncompleted" class="uncompleted btn">
+          Uncompleted tasks
+        </button>
+      </div>
+      </div>
     </div>
-    <button class="clear_btn" id="clear_btn">clear all</button>
 
-    </div>
-  </div>
     <script src="todo.js"></script>
   </body>
 </html>

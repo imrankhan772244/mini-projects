@@ -1,37 +1,61 @@
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 #container {
   width: 70%;
   margin: 0 auto;
 }
 
-
 /* main outer section */
-.todo{
+.todo {
   margin: auto;
   border: 1px solid gray;
   width: 50%;
-  height: 92vh;
-  border-radius: 5px ;
+  height: 90vh;
+  border-radius: 5px;
+}
+
+.name_sec {
+  display: flex;
+}
+
+/* add button */
+.add_task_btn {
+  width: 100px;
+  padding: 0;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #0079bf;
+  color: #fff;
+  margin-left: 5px;
+}
+.add_task_btn:hover {
+  background: #66a9d0;
+  cursor: pointer;
+}
+
+.view-sec {
+  /* margin-top: 30px; */
 }
 
 /* top heading */
 h1 {
+  margin: 10px;
   text-align: center;
 }
 
 /* tasks section */
-.tasks_sec{
+.tasks_sec {
   height: 60vh;
   margin: 10px auto;
-overflow-y: scroll;
-
+  overflow-y: scroll;
 }
 /* Style the scrollbar track */
 .tasks_sec::-webkit-scrollbar {
-  width: 8px; /* You can adjust the width as needed */
+  width: 5px; /* You can adjust the width as needed */
 }
 
 /* Style the scrollbar thumb */
@@ -51,23 +75,22 @@ overflow-y: scroll;
 }
 
 /* style complete all button */
-.complete_all{
-float: right;
-cursor:pointer;
-color: #888;
+.complete_all {
+  float: right;
+  cursor: pointer;
+  color: #888;
 }
-.complete_all i{
+.complete_all i {
   margin-right: 5px;
   color: #888;
 }
 
-.complete_all:hover{
+/*  */
+.complete_all:hover {
   color: black;
 }
 
-
-
-
+/* class for ul */
 ul {
   list-style-type: none;
   margin: 0;
@@ -76,7 +99,7 @@ ul {
   /* border: 1px solid #e5e5e5; */
 }
 
-
+/* class for li classes */
 ul li {
   padding: 10px;
   /* padding-left: 0; */
@@ -86,12 +109,12 @@ ul li {
   align-items: center;
 }
 
-
+/* hover class for li:hover */
 ul li:hover {
   background: #f3f3f3;
 }
 
-
+/* class for list input */
 #list input {
   padding: 0;
   height: initial;
@@ -100,18 +123,20 @@ ul li:hover {
   display: none;
   cursor: pointer;
 }
-
+/* list label  */
 #list label {
   position: relative;
   cursor: pointer;
 }
 
+/* checked list input after */
 #list label:before {
-  content:'';
+  content: "";
   -webkit-appearance: none;
   background-color: transparent;
   border: 2px solid #0079bf;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 10px;
   display: inline-block;
   position: relative;
@@ -119,8 +144,10 @@ ul li:hover {
   cursor: pointer;
   margin-right: 10px;
 }
+
+/* checked list input lable after */
 #list input:checked + label:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 2px;
@@ -131,32 +158,38 @@ ul li:hover {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+/* checked list input before */
 #list input:checked + label:before {
   background: #0079bf;
-} 
+}
+/* checked list input  */
 #list input:checked + label {
   text-decoration: line-through;
+  color: #888;
 }
+
+/* delete icon classs */
 .delete {
   height: 28px;
-    padding: 5px 0px;
-    border-radius: 3px;
+  padding: 5px 0px;
+  border-radius: 3px;
 }
+/* delete hover class */
 .delete:hover {
   background: #f2f2f2;
   cursor: pointer;
 }
 
-
 /* task addition */
 .add-task {
   width: 100%;
-    outline: none;
-    font-size: 15px;
-    padding: 11px;
-    border: 1px solid black;
-    margin-bottom: 3px;
-    border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  padding: 11px;
+  border: 1px solid black;
+  margin-bottom: 3px;
+  border-radius: 5px;
 }
 
 /* total tasks
@@ -164,12 +197,12 @@ ul li:hover {
 #total-tasks {
   margin-bottom: 20px;
   font-size: 13px;
-    margin-left: 2px;
-    color: gray;
+  margin-left: 2px;
+  color: gray;
 }
 
 /* clear button */
-.clear_btn{
+.clear_btn {
   float: right;
   height: 30px;
   width: 90px;
@@ -181,6 +214,29 @@ ul li:hover {
   cursor: pointer;
 }
 
-.clear_btn:hover{
+.clear_btn:hover {
   background: #66a9d0;
+}
+
+/* common btn class */
+.btn {
+  height: 30px;
+  background: #0079bf;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* common btn hover class */
+.btn:hover {
+  background: #66a9d0;
+}
+
+.all{
+  width: 50px;
+}
+
+.btns{
+  margin: 20px 0;
 }
