@@ -2,6 +2,9 @@ let tasks = [];
 const tasksList = document.getElementById('list');
 const addTaskInput = document.getElementById('add');
 const tasksCounter = document.getElementById('tasks-counter');
+const li_s=document.getElementsByTagName('li');
+const complete=document.getElementById("Complete_all");
+
 
 function addTaskToDOM(task){
     const li=document.createElement('li');
@@ -47,6 +50,7 @@ function deleteTask (taskId) {
 }   //delete
 
 function addTask (task) {
+
     if(task){
     tasks.push(task);
         renderList();
@@ -63,7 +67,7 @@ function showNotification(text) {
 function handleInputKeypress(e){
  if(e.key==='Enter'){
     const text=e.target.value;
-    console.log(text);
+    // console.log(text);
 
     if(!text){
         showNotification("Task text can't be empty");
@@ -83,7 +87,6 @@ function handleInputKeypress(e){
 
 function handleClickListener(e){
    const target =e.target;
-   console.log(target);
    if(target.className=='delete'){
     const taskId=target.dataset.id;
     deleteTask(taskId);
@@ -100,3 +103,29 @@ addTaskInput.addEventListener('keyup',handleInputKeypress);
 document.addEventListener('click',handleClickListener);
 }
 initializeApp();
+
+function removeli(){
+tasksList.innerHTML="";
+tasksCounter.innerHTML=tasks.length
+}
+
+// for clear all tasks
+document.getElementById("clear_btn").addEventListener('click',function(){
+    tasks.splice(0,tasks.length);
+    removeli();
+})
+
+
+// complete all tasks
+complete.addEventListener('click',function(){
+    if(tasks.length > 0){
+        for(let i=0;i<tasks.length;i++){
+        const currentTask=tasks[i];
+        currentTask.done = !currentTask.done;
+        renderList();
+    }
+    showNotification("All Done");
+    return;
+    }
+    console.log("error")
+})

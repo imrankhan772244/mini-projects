@@ -3,15 +3,80 @@
   font-family: 'Poppins', sans-serif;
 }
 #container {
-  width: 500px;
+  width: 70%;
   margin: 0 auto;
 }
+
+
+/* main outer section */
+.todo{
+  margin: auto;
+  border: 1px solid gray;
+  width: 50%;
+  height: 92vh;
+  border-radius: 5px ;
+}
+
+/* top heading */
+h1 {
+  text-align: center;
+}
+
+/* tasks section */
+.tasks_sec{
+  height: 60vh;
+  margin: 10px auto;
+overflow-y: scroll;
+
+}
+/* Style the scrollbar track */
+.tasks_sec::-webkit-scrollbar {
+  width: 8px; /* You can adjust the width as needed */
+}
+
+/* Style the scrollbar thumb */
+.tasks_sec::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+/* Style the scrollbar track on hover */
+.tasks_sec::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Hover color of the thumb */
+}
+
+/* Style the scrollbar track */
+.tasks_sec::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+}
+
+/* style complete all button */
+.complete_all{
+float: right;
+cursor:pointer;
+color: #888;
+}
+.complete_all i{
+  margin-right: 5px;
+  color: #888;
+}
+
+.complete_all:hover{
+  color: black;
+}
+
+
+
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
   /* border: 1px solid #e5e5e5; */
 }
+
+
 ul li {
   padding: 10px;
   /* padding-left: 0; */
@@ -20,9 +85,13 @@ ul li {
   align-items: inherit;
   align-items: center;
 }
+
+
 ul li:hover {
   background: #f3f3f3;
 }
+
+
 #list input {
   padding: 0;
   height: initial;
@@ -77,9 +146,9 @@ ul li:hover {
   background: #f2f2f2;
   cursor: pointer;
 }
-h1 {
-  text-align: center;
-}
+
+
+/* task addition */
 .add-task {
   width: 100%;
     outline: none;
@@ -87,10 +156,31 @@ h1 {
     padding: 11px;
     border: 1px solid black;
     margin-bottom: 3px;
+    border-radius: 5px;
 }
+
+/* total tasks
+ */
 #total-tasks {
   margin-bottom: 20px;
   font-size: 13px;
     margin-left: 2px;
     color: gray;
+}
+
+/* clear button */
+.clear_btn{
+  float: right;
+  height: 30px;
+  width: 90px;
+  border: none;
+  outline: none;
+  background: #0079bf;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear_btn:hover{
+  background: #66a9d0;
 }

@@ -4,13 +4,19 @@
     <title>Todo</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
+    <div class="todo">
     <h1>Todo List App</h1>
     <div id="container">
       <input placeholder="Add a task" class="add-task" id="add" data-helloWord="asdasdas"/>
       <span id="total-tasks">Total tasks: <span id="tasks-counter">0</span></span>
+      <span id="Complete_all" class="complete_all"> <i class="fa-solid fa-check-double"></i>Complete All</span>
+      <!-- <button class="clear_btn" id="clear_btn">clear all</button> -->
+      <div class="tasks_sec">
       <ul id="list">
+
         <!-- <li>
           <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
           <label for="task1">Buy groceries</label>
@@ -18,6 +24,10 @@
         </li> -->
       </ul>
     </div>
+    <button class="clear_btn" id="clear_btn">clear all</button>
+
+    </div>
+  </div>
     <script src="todo.js"></script>
   </body>
 </html>
